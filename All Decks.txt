@@ -1,0 +1,104 @@
+help	:h &lt;term&gt;<br />
+delete	d
+i	insert&lt;esc&gt;
+OCW	operator count motion
+I	text @ start of line
+w	forward one word
+b	back one word
+:q!	force quite w/o confirm
+yy	yank line (copy)
+a	append text after cursor
+6l	forward 6 letters
+p	paste below cursor
+P	paste above cursor
+:w	write file (save)
+:wq!	write + quite /w override confirmation
+u	undo
+ctrl+R	redo
+cw	change word (cut and replace)
+3cw	change 3 words
+o	insert blank line below and go into insert mode
+fN	move to the next instance of N
+:set syntax=	set syntax to whatever want
+jump to the third N	3fN
+"search for ""2.2.8"""	/2.2.8 &lt;enter&gt;
+replace	r&lt;letter&gt;
+search again	n
+search previous	N
+search and replace	:%s/&lt;searchterm&gt;/&lt;replaceterm&gt;/&lt;modifiers&gt;ie g=search all occurances c=ask for confirmation each match
+go to line 12	12G
+go to top of file	gg
+go to end of file	G
+change VIMs working directory	:cd &lt;path&gt;
+check working directory	:pwd
+open a file	:e &lt;filename&gt;
+:e .	view working directory
+V	visual linewise mode
+v	visual single mode
+y	yank (copy)
+d	delete (cut)
+c	change (cut, then activate insert)
+.	repeats your last command
+pwd	print working directory
+hostname	display computer's network name
+mkdir	make directory
+cd	change directory
+ls	list directory
+rmdir	remove directory
+pushd &lt;directory&gt;	go to directory and push it on stack
+popd	go to last directory pushed onto stack by pushd
+cp	copy a file or directory
+mv	move a file or directory
+less (filename)	page through a file in terminal (w is up, spacebar is down, q to quit)
+cat	print the whole file
+xargs	execute arguments
+find	find files
+grep	find things inside files
+man	read a manual page
+apropos	find what man page is appropriate
+env	look at your environment
+echo	print some arguments
+export	export/set a new environment variable
+exit	exit the shell
+sudo	execute as super user root
+chmod	change permission modifiers
+chown	change ownership
+ctrl+z	suspend application
+fg(1-9)	resume application
+rails new	makes a new rails app
+bundle install	install dependencies in rails app
+rails server	starts the rails server
+rails generate controller &lt;&gt;	generate a controller
+delete line	dd
+$	move to end of line
+0	move to beginning of line
+forward one word	w
+backward one word	b
+ZZ	save and quit
+1,50 w temp	write lines 1 to 50 in file named temp
+x	delete character
+dw	delete word from cursor on
+db	delete word backward
+dd	delete line
+d$	delete to end of line
+d^	delete to beginning of line
+y$	yank to end of line from cursor
+yw	yank from cursor to end of word
+5yy	yank 5 lines
+2p	paste from buffer 2 (there are 9)
+U	restore line
+J	join next line down to the end of current line
+:w file	"write to file named ""file"""
+:e file	start editing a new file
+:r file	read the contents fo a file to the workspace
+ctrl+1	page break (insert mode only)
+n(command)	do command (n) times
+repeat last command	.
+r	replace one character at the cursor position
+R	begin overstrike or replace mode (insert)
+/term	search for term
+?term	search backwards for term
+n	used after search to repeat search
+touch (filename)	touch a file (also creates a new one if none present)
+ea	insert text at end of word
+!!	executes last command
