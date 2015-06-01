@@ -102,3 +102,23 @@ n	used after search to repeat search
 touch (filename)	touch a file (also creates a new one if none present)
 ea	insert text at end of word
 !!	executes last command
+.to_f	Converts leading characters in a string as a floating point number.<div><br /></div><div>Extraneous characters past the end of a valid number are ignored. If there is not a valid number at the start of the str, 0.0 is returned. This method never raises an exception.</div>
+x,y,z = ARGV	ARGV holds arguments passed to the Ruby script when it is run.
+close	closes a file
+read	reads the contents of a file. can assign to var
+readline	reads just one line of a text file
+truncate	empties the file. (beware)
+write('stuff')	"writes ""stuff"" into the file"
+"echo -e ""input text"" &gt; or &gt;&gt; ""filename"""	echo's input text to append(&gt;) or overwrite(&gt;&gt;) to filename.<div>-e enables \ escape sequences</div>
+(command)?	see the help file for that command
+quit out of help file	:q
+.split(' ')	split a string into an array
+.sort	sort an array
+.shift	moves the first word from an array to a var
+.pop	pops the last word off an array and saves it to a var
+:set paste :set nopaste	disable auto indent before pasting, reenable after
+.push	push things to an array
+.each	do a block for each item in an array
+(0..5).each do |i|	does 5 iterations&nbsp;
+for i in 'array' ; puts i; end	(for loop) goes through each item in 'array' and returns i
+'var'.each do |i|; puts i; end	returns i for each item in the array
