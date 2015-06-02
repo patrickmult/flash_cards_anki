@@ -104,21 +104,66 @@ ea	insert text at end of word
 !!	executes last command
 .to_f	Converts leading characters in a string as a floating point number.<div><br /></div><div>Extraneous characters past the end of a valid number are ignored. If there is not a valid number at the start of the str, 0.0 is returned. This method never raises an exception.</div>
 x,y,z = ARGV	ARGV holds arguments passed to the Ruby script when it is run.
-close	closes a file
-read	reads the contents of a file. can assign to var
-readline	reads just one line of a text file
-truncate	empties the file. (beware)
-write('stuff')	"writes ""stuff"" into the file"
+File.close	closes a file
+File.read	reads the contents of a file. can assign to var
+BEGIN	"Run this block when the script starts.<div>BEGIN { puts ""hi"" }</div>"
+File.truncate	empties the file. (beware)
+File.write('stuff')	"writes ""stuff"" into the file"
 "echo -e ""input text"" &gt; or &gt;&gt; ""filename"""	echo's input text to append(&gt;) or overwrite(&gt;&gt;) to filename.<div>-e enables \ escape sequences</div>
 (command)?	see the help file for that command
 quit out of help file	:q
-.split(' ')	split a string into an array
-.sort	sort an array
-.shift	moves the first word from an array to a var
-.pop	pops the last word off an array and saves it to a var
+String.split(' ')	split a string into an array
+Array.sort	sort an array
+Array.shift	moves the first word from an array to a var
+Array.pop	pops the last word off an array and saves it to a var
 :set paste :set nopaste	disable auto indent before pasting, reenable after
-.push	push things to an array
-.each	do a block for each item in an array
+Array.push	push things to an array
+Array.each	do a block for each item in an array
 (0..5).each do |i|	does 5 iterations&nbsp;
 for i in 'array' ; puts i; end	(for loop) goes through each item in 'array' and returns i
 'var'.each do |i|; puts i; end	returns i for each item in the array
+END	"Run this block when the script is done.<div>END { puts ""hi"" }</div>"
+alias	Create another name for a function.<div>alias X Y</div>
+begin	Start a block, usually for exceptions.<div>begin; do; until i=somevalue</div>
+break	Break out of a loop<div>while true; break; end</div>
+case	Case style conditional, like an if.<div>case X; when Y; else; end</div>
+class	Define a new class.<div>class X; end</div>
+def	Define a new function.<div>def foo(); end</div>
+defined?	Checks if a class/var/fun is defined<div>defined? foo</div>
+elsif	Else if conditional.<div>Notice there is NO E.</div>
+ensure	run a bit of code regardless of errors (yikes)
+for	For loop syntax.<div>for x in y; do; end</div>
+module	define a new module<div>A module is a collection of methods and constants.</div>
+next	Skip to the next element of a .each iterator<div>(0..5).each {|y| next }</div>
+redo	Rerun a code block exactly the same.<div>(0..5).each {|i| redo if i &gt; 2}</div>
+rescue	Run this code if an exception happens.
+retry	In a rescue clause, says to try the block again
+self	The current object, class, or module.
+super	The parent class of this class.
+then	Can be used with if optionally.<div>if true then puts hi; end</div>
+undef X	remove a function definition from a class
+unless	"inverse of if<div>unless false then puts ""not""; end</div>"
+until	inverse of while block
+when	part of case conditionals<div>case x; when y; else; end</div>
+while	while loop
+yield	pause and transfer control to the code block
+data types	true, false, nil, strings, numbers, floats, arrays, hashes
+\\	backslash string escape
+\'	single quote string escape
+"\"""	double quote
+\a	Bell
+\b	Backspace
+\f	Formfeed
+\n	Newline
+\r	Carriage
+\t	Tab
+\v	Vertical tab
+**	Power of operator
+::	Colon access<div>Module::Class</div>
+.	Dot access (method access)
+&lt;=&gt;	Comparison operator
+..	Range inclusive<div>(0..3).to_a == [0,1,2,3]</div>
+range non-inclusive	(1...3).to_a == [2]
+@	Object scrope
+@@	Class scope
+$	Global scope
