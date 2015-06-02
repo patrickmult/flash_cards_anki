@@ -100,7 +100,6 @@ R	begin overstrike or replace mode (insert)
 ?term	search backwards for term
 n	used after search to repeat search
 touch (filename)	touch a file (also creates a new one if none present)
-ea	insert text at end of word
 !!	executes last command
 .to_f	Converts leading characters in a string as a floating point number.<div><br /></div><div>Extraneous characters past the end of a valid number are ignored. If there is not a valid number at the start of the str, 0.0 is returned. This method never raises an exception.</div>
 x,y,z = ARGV	ARGV holds arguments passed to the Ruby script when it is run.
@@ -167,3 +166,33 @@ range non-inclusive	(1...3).to_a == [2]
 @	Object scrope
 @@	Class scope
 $	Global scope
+pushd (directory)	go to directory and add it to the popd stack
+e	go to end of word<div>ea - go to end of word and append</div>
+"Array[x..y].join("" "")"	x..y range optional. Print out and join the array with the contents of the join argument
+Tell git who you are	"<div>git config --global user.name ""Sam Smith""</div><div>git config --global user.email y@x.com</div>"
+git init	create a new repo in current working directory
+git clone /path/to/repo OR username@host:/path/to/repo	clone a get repo into your current working directory
+git add (filename) or --all	add a file name or all files to the next commit
+"git commit -m ""Commit message"""	commit the added files /w message
+git push origin master	save changes on master branch to your origin repo (usaully github)
+git status	list status of current files to be commited or visa versa
+git remote add origin (server)	add a server as the origin, replace origin /w something else to add another remote location
+git remote -v	list all currently configured remote repositories
+git checkout -b (branchname)	create a new branch and switch to it
+git checkout (branchname)	siwtch from one branch to another
+git branch	list all branches in your repo and displays current working branch
+git branch -d (branchname)	delete the selected branch
+git push origin (branchname)	push a selected branch to your remote repo
+git push --all origin	push all branches to origin
+git push origin :(branchname)	delete a branch on your remote repo
+git pull	fetch and merge changes on the remote server to your working directory
+git merge (branchname)	to merge a different branch into your active branch
+git diff	view all merge conflicts
+git diff --base (filename)	view the conflicts against the branch file
+git diff (sourcebranch) (targetbranch)	preview the changes, before merging between selected branches
+git tag 1.0.0 (commitID)	you can use tagging to mark a significant changeset such as a release
+git log	shows the log of commits for the repo
+git push --tags origin	push all tags to the remote repository
+git checkout -- (filename)	undoes local changes and rolls back to the last content in head(??? lookup later)<div>changes already added to the index, as well as new files, will be kept</div>
+git fetch origin<div>git reset --hard origin/master</div>	to drop all local changes and commits and fetch the latest history from the server and point your local master branch at it
+"git grep ""foo()"""	search the working directory for foo()
