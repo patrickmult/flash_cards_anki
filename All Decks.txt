@@ -196,3 +196,11 @@ git push --tags origin	push all tags to the remote repository
 git checkout -- (filename)	undoes local changes and rolls back to the last content in head(??? lookup later)<div>changes already added to the index, as well as new files, will be kept</div>
 git fetch origin<div>git reset --hard origin/master</div>	to drop all local changes and commits and fetch the latest history from the server and point your local master branch at it
 "git grep ""foo()"""	search the working directory for foo()
+Array.map	"Invokes the given block once for each element of self, replaceing the element with the value returned by the block.<div>a.map! {|x| x+""!""} =&gt; [1!,2!,3!]</div>"
+:e filename	edit another file
+:vsplit file	verticle split a new file
+:only	keep only current window open
+:ls	show current buffers
+ctrl-w ctrl-w	move to next window (look up other options later)
+10 ctrl-w+	increase current window size by 5 lines
+ctrol-w_	maximize current window
